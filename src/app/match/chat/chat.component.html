@@ -1,0 +1,9 @@
+<div  class = "border">
+<div *ngFor="let message of messages">
+    {{message.author}}:  {{message.text}}    {{message.time}}
+</div>
+</div>
+<form>
+    <input type="submit" value="send" (click) = "writeMessage()" name="send" class="send" >
+    <input type="text" [(ngModel)]="newMessage" name = "text" class="wide-input">
+</form>

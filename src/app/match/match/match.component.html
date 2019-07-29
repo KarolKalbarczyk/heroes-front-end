@@ -1,0 +1,6 @@
+{{match?.user1?.username}}
+{{match?.user2?.username}}
+
+<app-game-board></app-game-board>
+
+<app-chat class="chat" (sendMessage) = "sendMessage($event)" [messages] = "match?.chat.messages"></app-chat>

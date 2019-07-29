@@ -1,0 +1,15 @@
+.wide-input{
+    float: left;
+    width: 80%;
+}
+
+.border{
+    border-style: dashed;
+    border-color: brown;
+}
+
+
+.send{
+    float: right;
+    width: 18%;
+}

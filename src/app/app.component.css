@@ -1,0 +1,8 @@
+.centercontainer{
+    word-break:break-word;
+    height: 20em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0,+50%)
+}

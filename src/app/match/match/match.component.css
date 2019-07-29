@@ -1,0 +1,9 @@
+.chat {
+    position: absolute;
+    right:  10px;
+    bottom: 10px;
+    width: 20%;
+    word-break:break-word;
+}
+
+
