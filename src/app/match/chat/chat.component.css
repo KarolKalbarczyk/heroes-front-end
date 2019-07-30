@@ -6,10 +6,20 @@
 .border{
     border-style: dashed;
     border-color: brown;
+    overflow-y: scroll;
+    height: 300px;
 }
 
 
 .send{
     float: right;
     width: 18%;
+}
+
+.chat-scroll{
+    overflow-y: scroll;
+}
+
+.break{
+   word-break: break-all
 }

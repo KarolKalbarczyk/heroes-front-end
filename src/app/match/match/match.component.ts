@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { GameBoardComponent } from 'src/app/match/game-board/game-board.component';
 import { HttpClient } from '@angular/common/http';
@@ -20,7 +20,8 @@ export class MatchComponent implements OnInit,OnDestroy {
   matchurl = "/match/"
   messageurl = "/message/"
   interval: any
-  chat: ChatComponent
+  @ViewChild(ChatComponent, {static:false})  chat : ChatComponent 
+  
 
   constructor(private route: ActivatedRoute,private http:HttpClient) {    }
 
@@ -31,8 +32,9 @@ export class MatchComponent implements OnInit,OnDestroy {
   }
 
   refresh(){
+    this.chat.isScrollDown()
     this.http.get<Match>(localhost + this.matchurl + this.id ).subscribe((match) =>(this.match = match))
-  }
+    }
 
   ngOnDestroy(){
     clearInterval(this.interval)
