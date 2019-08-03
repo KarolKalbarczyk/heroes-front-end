@@ -1,6 +1,10 @@
 {{match?.user1?.username}}
 {{match?.user2?.username}}
+{{match | json}}
+{{this.id}}
+{{this.match.presentUser}}
+{{turnOwner}}
 
-<app-game-board></app-game-board>
+<app-game-board [fields] = "match?.board?.fields"></app-game-board>
 
 <app-chat class="chat" (sendMessage) = "sendMessage($event)" [messages] = "match?.chat.messages"></app-chat>

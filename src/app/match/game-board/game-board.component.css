@@ -1,11 +1,11 @@
 .grid {
     margin-left: 1em;
     margin-right: 1em;
-    grid-template-rows: repeat(5,auto);
-    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(10,auto);
+    grid-template-columns: repeat(10, auto);
     display: grid;
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
     justify-content: center;
 }
 
@@ -13,7 +13,7 @@
     width: 40px;
     height: 40px;
 }
-.color{
+.color :hover{
     color: blue;
     background-color: brown
 }

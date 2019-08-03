@@ -1,10 +1,8 @@
 <div class="grid" >
         <div  *ngFor= "let field of fields" >
-                <button [ngClass]="{'size':true,'color': field.mouse()}" (click)="field.onClick(field.row, field.column)"
-                 (mouseenter)= "field.mouseON()" (mouseleave)="field.mouseOFF()">{{field.row}}  </button>
-             </div>
-
+                <button [ngClass]="{'size':true,'color':true}"  (click)="onClick(field.row, field.column)">{{field.unit?.health}}</button>
+                </div>
 </div>
 <p>aaa</p>
-
+<p>SDdasa</p>
 

@@ -6,7 +6,7 @@ import { VirtualTimeScheduler } from 'rxjs';
 export class Message{
   time:String
   author:String
-  text: String
+  text: Number
 
   constructor(time,author,text){
     this.time = time
@@ -47,7 +47,6 @@ export class ChatComponent implements OnInit, OnChanges{
     if(this.isDown){
       this.scrollDown()
     }
-    console.log(this.isDown)
   }
 
   writeMessage(){
