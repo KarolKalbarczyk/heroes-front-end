@@ -16,6 +16,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatchSearchComponent } from './match/match-search/match-search.component';
 import { MatchComponent } from './match/match/match.component';
 import { ChatComponent } from './match/chat/chat.component';
+import { SecondsToMinutesPipe } from './Pipes/seconds-to-minutes.pipe';
+import { UnitInfoComponent } from './match/unit-info/unit-info.component';
+import { ShopComponent } from './match/shop/shop.component';
+import {MatchIdHolderService} from "./services/match-id-holder.service";
+import {TokenStorageService} from "./services/token-storage.service";
 
 
 @NgModule({
@@ -29,10 +34,13 @@ import { ChatComponent } from './match/chat/chat.component';
     SignupComponent,
     MatchSearchComponent,
     MatchComponent,
-    ChatComponent
-    
+    ChatComponent,
+    SecondsToMinutesPipe,
+    UnitInfoComponent,
+    ShopComponent
 
-  
+
+
   ],
   imports: [
     BrowserModule,
@@ -43,7 +51,8 @@ import { ChatComponent } from './match/chat/chat.component';
     HttpClientModule,
 
   ],
-  providers: [httpInterceptorProviders],
-  bootstrap: [AppComponent]
+  providers: [httpInterceptorProviders,MatchIdHolderService,TokenStorageService],
+  bootstrap: [AppComponent],
+  entryComponents: [UnitInfoComponent],
 })
 export class AppModule { }

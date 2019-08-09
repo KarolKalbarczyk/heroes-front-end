@@ -1,8 +1,15 @@
 <div class="grid" >
-        <div  *ngFor= "let field of fields" >
-                <button [ngClass]="{'size':true,'color':true}"  (click)="onClick(field.row, field.column)">{{field.unit?.health}}</button>
+        <div  *ngFor= "let field of fields;let i = index;" >
+                <button [ngClass]="{'size':true,'color':true}"  (click)="onClick(field.row, field.column)"
+                        (mouseenter)="displayInfo(field.row, field.column,popup,i)" #popup
+                (mouseout)="destroyUnitInfo()"><img src={{field.unit?.icon}}>  </button>
                 </div>
 </div>
 <p>aaa</p>
 <p>SDdasa</p>
 
+<div #unitInfoPopup ><p>cc</p></div>
+<p  [ngStyle] = "position()">bbb</p>
+<img [src]="fields[0].unit.icon">
+<img src="/assets/img/archer.png">
+{{fields[0] |json}}

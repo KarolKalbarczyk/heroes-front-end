@@ -1,9 +1,11 @@
 {{match?.user1?.username}}
 {{match?.user2?.username}}
-{{match | json}}
 {{this.id}}
 {{this.match.presentUser}}
 {{turnOwner}}
+<div class = "result">
+  {{result}}
+</div>
 
 <app-game-board [fields] = "match?.board?.fields"></app-game-board>
 

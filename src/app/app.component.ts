@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { TokenStorageService } from './services/token-storage.service';
- 
-export const localhost = "http://localhost:8080";
+import {applySourceSpanToExpressionIfNeeded} from "@angular/compiler/src/output/output_ast";
+
+export const localhost:string = "http://localhost:8080";
 
 @Component({
   selector: 'app-root',
@@ -11,9 +12,9 @@ export const localhost = "http://localhost:8080";
 export class AppComponent implements OnInit {
   private roles: string[];
   private authority: string;
- 
+
   constructor(private tokenStorage: TokenStorageService) { }
- 
+
   ngOnInit() {
     if (this.tokenStorage.getToken()) {
       this.roles = this.tokenStorage.getAuthorities();

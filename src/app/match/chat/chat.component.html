@@ -1,6 +1,6 @@
 <div  #panel class = "border" >
 <div contenteditable="true" *ngFor="let message of messages" class="break">
-    <span [ngStyle]="colorOfUser(message.author)">{{message.author}}</span>: {{message.text}} {{message.time}}
+    <span [ngStyle]="colorOfUser(message.author)">{{message.author}}</span>: {{message.text}} {{message.time | secondsToMinutes}}
 </div>
 </div>
 <form>

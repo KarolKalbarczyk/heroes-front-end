@@ -1,0 +1,7 @@
+<div [ngStyle]="position" class="info" *ngIf="unit">
+  <p class = textcenter>{{unit.owner}}</p>
+  <p> damage: {{unit.damage}}</p>
+  <p> movement range:{{unit.movementRange}}</p>
+  <p> attack range:{{unit.range}}</p>
+  <p> hit points: {{unit.health}}/{{unit.maxHealth}}</p>
+</div>

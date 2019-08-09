@@ -10,10 +10,13 @@ import { FormsModule } from '@angular/forms';
 import { SignupComponent } from './Components/signup/signup.component';
 import { MatchSearchComponent } from './match/match-search/match-search.component';
 import { MatchComponent } from './match/match/match.component';
+import {UnitInfoComponent} from "./match/unit-info/unit-info.component";
+import {NgbModalModule} from "@ng-bootstrap/ng-bootstrap";
+import {ShopComponent} from "./match/shop/shop.component";
 
- 
 
- 
+
+
 const routes: Routes = [
     {
         path: 'home',
@@ -42,20 +45,27 @@ const routes: Routes = [
         component: MatchSearchComponent,
     },
 
-    
+
     { path: 'match',
       children: [{
            path: ':id', component: MatchComponent}]
     },
 
+  { path: 'shop',
+    children: [{
+      path: ':id', component: ShopComponent}]
+  },
+
 ];
- 
+
 @NgModule({
     imports: [RouterModule.forRoot(routes),
       BrowserModule,
       CommonModule,
     FormsModule,
-],
-    exports: [RouterModule]
+
+    ],
+    exports: [RouterModule],
+
 })
 export class AppRoutingModule { }

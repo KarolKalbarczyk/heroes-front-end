@@ -7,5 +7,5 @@ export class MatchIdHolderService {
 
   constructor() { }
 
-  matchId:Number
+  matchId: number
 }

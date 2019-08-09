@@ -1,0 +1,16 @@
+ <form>
+   <div *ngFor="let unit of units">
+  <input type="checkbox" name=unit  value={{unit}} (change)="changeunit(unit)" #checkbox>{{unit}}<br>
+     <p>{{unitNumbers[unit]}}</p>
+   </div>
+
+
+ </form>
+ coins: {{coins}}
+ <div>
+   <button (click)="buy()" value="buy" [disabled]="!unitName" name="buy" >buy</button>
+   <button (click)="sell()" value="sell" [disabled]="!unitName"  name="sell">sell</button>
+   <button (click)="signalReadiness(true)" value="ready" [disabled]="ready" name="ready" >ready</button>
+   <button (click)="signalReadiness(false)" value="not ready" [disabled]="!ready" name = "not ready" >not ready</button>
+ </div>
+<p>AAA</p>
