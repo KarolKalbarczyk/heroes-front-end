@@ -4,23 +4,16 @@ import { TokenStorageService } from 'src/app/services/token-storage.service';
 import { VirtualTimeScheduler } from 'rxjs';
 
 export class Message{
-  time:String
-  author:String
-  text: Number
+  time: number
+  author: string
+  text: string
 
   constructor(time,author,text){
     this.time = time
     this.author = author
     this.text = text
-    console.log(this.fullMessage)
   }
 
-  get fullMessage(){
-    console.log("AASDASDSA")
-    return `${this.author}: ${this.text} at ${this.time}`
-  }
-
-  
 }
 
 @Component({
@@ -54,7 +47,7 @@ export class ChatComponent implements OnInit, OnChanges{
   }
 
   scrollDown(){
-    this.panel.nativeElement.scrollTop = this.panel.nativeElement.scrollHeight; 
+    this.panel.nativeElement.scrollTop = this.panel.nativeElement.scrollHeight;
   }
 
   isScrollDown(){

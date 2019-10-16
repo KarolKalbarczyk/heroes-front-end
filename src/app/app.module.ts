@@ -21,6 +21,9 @@ import { UnitInfoComponent } from './match/unit-info/unit-info.component';
 import { ShopComponent } from './match/shop/shop.component';
 import {MatchIdHolderService} from "./services/match-id-holder.service";
 import {TokenStorageService} from "./services/token-storage.service";
+import { MyAccountComponent } from './Account/my-account/my-account.component';
+import { MatchResultComponent } from './Account/match-result/match-result.component';
+import { ChangeInfoComponent } from './Account/change-info/change-info.component';
 
 
 @NgModule({
@@ -37,7 +40,10 @@ import {TokenStorageService} from "./services/token-storage.service";
     ChatComponent,
     SecondsToMinutesPipe,
     UnitInfoComponent,
-    ShopComponent
+    ShopComponent,
+    MyAccountComponent,
+    MatchResultComponent,
+    ChangeInfoComponent
 
 
 
@@ -46,7 +52,6 @@ import {TokenStorageService} from "./services/token-storage.service";
     BrowserModule,
     CommonModule,
     FormsModule,
-    AppRoutingModule,
     RouterModule,
     HttpClientModule,
 

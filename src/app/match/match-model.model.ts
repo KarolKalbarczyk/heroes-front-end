@@ -1,18 +1,18 @@
 import { BoardComponent } from './game-board/game-board.component';
 import { User } from './user.model';
-import { ChatComponent } from './chat/chat.component';
+import {ChatComponent, Message} from './chat/chat.component';
 
 export class MatchModel {
     board: BoardComponent;
     user1: User;
     user2: User;
     winner: User;
-    chat: ChatComponent;
+    chat: Message[];
     presentUser: string;
     turnNumber: number;
 
 
-    constructor(board: BoardComponent, user1: User, user2: User, chat: ChatComponent, presentUser: string, turnNumber: number, winner: User) {
+    constructor(board: BoardComponent, user1: User, user2: User, chat: Message[], presentUser: string, turnNumber: number, winner: User) {
         this.board = board;
         this.user1 = user1;
         this.user2 = user2;
